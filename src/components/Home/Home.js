@@ -13,7 +13,9 @@ const Home = () => {
                 <h2 className='text-center'>This is Header</h2>
             </div>
             <div className='topics'>
-                
+                {
+                    quizes.map(quiz => <Quiz quiz={quiz} key={quiz.id}></Quiz>)
+                }
             </div>
         </div>
     );
