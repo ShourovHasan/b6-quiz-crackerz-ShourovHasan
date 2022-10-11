@@ -1,0 +1,26 @@
+.header_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(64, 158, 221, 0.393);
+    height: 60px;
+    padding: 0 10%;    
+    color: blueviolet;
+}
+.header_menu a{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+.header_menu a:hover{
+    background-color: black;
+    border-radius: 8px;
+    color: white;
+}
+.active{
+    background-color: orange;
+    color: black;
+    border-radius: 8px;
+}
