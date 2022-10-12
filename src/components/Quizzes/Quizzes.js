@@ -5,20 +5,25 @@ import './Quizzes.css';
 
 const Quizzes = () => {
     const quizzes = useLoaderData().data;
-    const { name } = quizzes;
-    const questions = quizzes.questions;
+    const { name, questions } = quizzes;
 
-    // console.log(questions);
+    // console.log(quizzes);
+    
     return (
         <div>
-            <h2 className='text-center'>Quiz of {name}</h2>
-            <div>
-                {
-                    questions.map(quiz => <Quiz
-                        quiz={quiz}
-                        key={quiz.id}
-                    ></Quiz>)
-                }
+            <h2 className='text-center py-3'>Quiz of {name}</h2>
+            <div className='quiz_content'>
+                <div>
+                    {
+                        questions.map(quiz => <Quiz
+                            quiz={quiz}
+                            key={quiz.id}
+                        ></Quiz>)
+                    }
+                </div>
+                <div>
+
+                </div>
             </div>
         </div>
     );

@@ -1,16 +1,24 @@
-import React from 'react';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
 import QuestionPoint from '../QuestionPoint/QuestionPoint';
 import './Quiz.css';
 
 const Quiz = ({ quiz }) => {
-    const { id, question, options, correctAnswer } = quiz;
+    const { question, options, correctAnswer } = quiz;
+    const [answer, setAnswer] = useState('');
     // console.log('quiz', options);
+    const handleCorrectAnswer = () => {
+        // console.log(correctAnswer);
+        setAnswer('Answer is: ' + correctAnswer);
+    }
+    
     
     return (
         <div className='quiz'>
             <div className='question_title'>
                 <h5 className='text-center'> {question}</h5> 
-                <p></p>
+                <p onClick={()=>handleCorrectAnswer()}><FontAwesomeIcon icon={faEye} /></p>
             </div>
             <div className='questions'>
                 <form>
@@ -19,9 +27,17 @@ const Quiz = ({ quiz }) => {
                             key={idx}
                             correctAnswer={correctAnswer}
                             option={option}
+                            // handleCorrectOption={handleCorrectOption}
                         ></QuestionPoint>)
                     }
                 </form>
+                <div className='correct_answer'>
+                    <h4>{answer}</h4>
+                    {/* <div>
+                        <button onClick={notify}>{correctAnswer}</button>
+                        <ToastContainer />
+                    </div> */}
+                </div>
             </div>
         </div>
     );
