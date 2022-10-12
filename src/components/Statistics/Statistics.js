@@ -1,15 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const Statistics = () => {
     const topics = useLoaderData().data;
-    console.log(topics);
+    // console.log(topics);
     return (
         <div className='d-flex justify-content-center align-items-center py-5 w-100 h-100'>
                 <LineChart
-                    width={500}
+                    width={400}
                     height={300}
                     data={topics}
                     margin={{

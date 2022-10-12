@@ -24,3 +24,22 @@
     color: black;
     border-radius: 8px;
 }
+/* responsive */
+/* @media screen and (max-width: 992px) {
+    .questions form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .question_title {
+        padding-left: 0;
+    }
+} */
+
+@media screen and (max-width: 600px) {
+    .header_container {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100px;
+    }
+}
