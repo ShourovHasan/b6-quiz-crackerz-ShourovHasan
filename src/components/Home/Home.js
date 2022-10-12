@@ -1,12 +1,11 @@
 import React from 'react';
 import { Outlet, useLoaderData } from 'react-router-dom';
-import Header from '../Header/Header';
-import Quiz from '../Quiz/Quiz';
+import Topic from '../Topic/Topic';
 import './Home.css';
 
 const Home = () => {
-    const quizes = useLoaderData().data;
-    console.log(quizes);
+    const topics = useLoaderData().data;
+    console.log(topics);
     return (
         <div className='body_container'>
             <div>
@@ -14,7 +13,7 @@ const Home = () => {
             </div>
             <div className='topics'>
                 {
-                    quizes.map(quiz => <Quiz quiz={quiz} key={quiz.id}></Quiz>)
+                    topics.map(topic => <Topic topic={topic} key={topic.id}></Topic>)
                 }
             </div>
         </div>

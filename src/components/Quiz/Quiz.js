@@ -1,16 +1,27 @@
 import React from 'react';
+import QuestionPoint from '../QuestionPoint/QuestionPoint';
 import './Quiz.css';
 
 const Quiz = ({ quiz }) => {
-    const { id, name, logo, total } = quiz;
+    const { id, question, options, correctAnswer } = quiz;
+    // console.log('quiz', options);
+    
     return (
-        <div className='topic'>
-            <div className='topic_logo'>
-                <img src={logo} alt="" />
+        <div className='quiz'>
+            <div className='question_title'>
+                <h5 className='text-center'> {question}</h5> 
+                <p></p>
             </div>
-            <div className='topic_content'>
-                <h5>{name}</h5>
-                <button className='border-0'>Start Practice</button>
+            <div className='questions'>
+                <form>
+                    {
+                        options.map((option, idx) => <QuestionPoint
+                            key={idx}
+                            correctAnswer={correctAnswer}
+                            option={option}
+                        ></QuestionPoint>)
+                    }
+                </form>
             </div>
         </div>
     );

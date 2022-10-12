@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import Quizzes from './components/Quizzes/Quizzes';
 import Main from './layouts/Main';
 
 function App() {
@@ -23,6 +24,13 @@ function App() {
           element: <Home></Home>
         },
         {
+          path: '/home/:topicId',
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
+          },
+          element: <Quizzes></Quizzes>
+        },
+        {
           path: '/statistics',
           element: <Statistics></Statistics>
         },
@@ -31,6 +39,14 @@ function App() {
           element: <Blog></Blog>
         },
       ]
+    },
+    {
+      path: '*',
+      element: <div className='py-5 d-flex justify-content-center align-items-center'>
+        <h2>This route not found.
+          <span className='text-danger'>404</span>
+        </h2>
+      </div>
     }
   ]);
   return (
