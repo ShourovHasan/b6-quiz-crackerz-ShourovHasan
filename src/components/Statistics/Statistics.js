@@ -13,8 +13,8 @@ const Statistics = () => {
                     data={topics}
                     margin={{
                         top: 5,
-                        right: 30,
-                        left: 20,
+                        right: 40,
+                        left: 0,
                         bottom: 5,
                     }}
                 >
