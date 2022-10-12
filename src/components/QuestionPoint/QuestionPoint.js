@@ -4,7 +4,7 @@ import './QuestionPoint.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const QuestionPoint = ({ option, correctAnswer }) => {
+const QuestionPoint = ({ option, correctAnswer, handleQuestionsResult }) => {
     // console.log('quiz', correctAnswer);    
     let notify = () => {
         if (option === correctAnswer) {
@@ -18,7 +18,7 @@ const QuestionPoint = ({ option, correctAnswer }) => {
     return (
         <div className='option'>
             <input onClick={notify} type="radio" id={option} name={correctAnswer} value={option}></input>
-            <label htmlFor={option}>
+            <label onClick={() => handleQuestionsResult(option, correctAnswer)} htmlFor={option}>
                 {option}
                 <ToastContainer />                
             </label>     

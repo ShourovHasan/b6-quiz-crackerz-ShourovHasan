@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import QuestionPoint from '../QuestionPoint/QuestionPoint';
 import './Quiz.css';
 
-const Quiz = ({ quiz }) => {
+const Quiz = ({ quiz, handleQuestionsResult }) => {
     const { question, options, correctAnswer } = quiz;
     const [answer, setAnswer] = useState('');
     // console.log('quiz', options);
@@ -27,7 +27,7 @@ const Quiz = ({ quiz }) => {
                             key={idx}
                             correctAnswer={correctAnswer}
                             option={option}
-                            // handleCorrectOption={handleCorrectOption}
+                            handleQuestionsResult={handleQuestionsResult}
                         ></QuestionPoint>)
                     }
                 </form>
