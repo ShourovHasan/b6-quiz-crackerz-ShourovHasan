@@ -5,8 +5,9 @@ import './Header.css';
 const Header = () => {
     return (
         <div className='header_container'>
-            <div>
-                <h2 >AIUB Quiz Crackers</h2>                
+            <div className='header_brand'>
+                <img src="quiz_logo.png" alt="" />
+                <h2>AIUB Quiz Crackers</h2>                
             </div>
             <div className='header_menu'>
                 <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>

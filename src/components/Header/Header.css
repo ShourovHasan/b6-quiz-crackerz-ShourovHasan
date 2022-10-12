@@ -7,6 +7,16 @@
     padding: 0 10%;    
     color: blueviolet;
 }
+.header_brand{
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+.header_brand img{
+    width: 4%;
+    padding-right: 3px;
+    padding-bottom: 4px;
+}
 .header_menu a{
     text-decoration: none;
     margin-left: 20px;
