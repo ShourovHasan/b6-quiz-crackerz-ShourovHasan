@@ -31,3 +31,20 @@
 .correct_answer{
     padding-top: 10px;
 }
+
+/* responsive */
+@media screen and (max-width: 992px) {
+    .questions form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .question_title{
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .question_title {
+        /* padding: 10px 20px; */
+        padding-left: 0;
+        justify-content: space-between;
+    }
+}

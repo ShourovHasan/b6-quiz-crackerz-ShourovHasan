@@ -5,21 +5,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const QuestionPoint = ({ option, correctAnswer }) => {
-    // console.log('quiz', correctAnswer);
-    // const notify = () => toast("Wow so easy!");
-    // const handleCorrectOption = (option) => {
-    // }
-    // if (option === correctAnswer) {
-        // console.log(option);
-        // <ToastContainer />
-        let notify = () => {
-            if (option === correctAnswer) {
-                return toast("Your Answer is Correct");
-            }
-            else {
-                return toast("Your Answer is Wrong")
-            }
-        } ;
+    // console.log('quiz', correctAnswer);    
+    let notify = () => {
+        if (option === correctAnswer) {
+            return toast("Your Answer is Correct");
+        }
+        else {
+            return toast("Your Answer is Wrong")
+        }
+    } ;
     
     return (
         <div className='option'>
