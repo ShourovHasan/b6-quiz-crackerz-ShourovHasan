@@ -17,7 +17,13 @@ const Blog = () => {
                         Create global variables that may be sent down a React component tree by using the React Context API. When you wish to exchange information that can be accessible by several app components without having to explicitly send props down at each level, you utilize the Context API.
                     </Accordion.Body>
                 </Accordion.Item>
-                
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header>How does useRef work in ReactJS?</Accordion.Header>
+                    <Accordion.Body>
+                        Create a mutable object whose value is retained between re-renders by using the useRef() hook.
+                        To access the underlying DOM element produced by a component, use the useRef() hook. When you urgently need to visit a DOM element without utilizing a ref attribute, this is helpful.
+                    </Accordion.Body>
+                </Accordion.Item>
             </Accordion>
         </div>
     );
