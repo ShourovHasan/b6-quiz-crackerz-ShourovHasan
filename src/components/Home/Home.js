@@ -8,8 +8,13 @@ const Home = () => {
     console.log(topics);
     return (
         <div className='body_container'>
-            <div className='mx-5 my-3 text-center'>
-                <p>Welcome to <strong>AIUB Quiz Crackers</strong>. Our website is a great way to get ahead in your studies! We have a wide range of quizzes to help you learn and remember key information for your exams. Plus, our quizzes are always up-to-date, so you can be sure you're getting the most out of your study time.</p>
+            <div className='project_info'>
+                <div className='banner'>
+                    <img src="quiz_banner.png" alt="" />
+                </div>
+                <div className='header_info'>
+                    <p>Welcome to <strong>AIUB Quiz Crackers</strong>. Our website is a great way to get ahead in your studies! We have a wide range of quizzes to help you learn and remember key information for your exams. Plus, our quizzes are always up-to-date, so you can be sure you're getting the most out of your study time.</p>
+                </div>
             </div>
             <div className='topics'>
                 {

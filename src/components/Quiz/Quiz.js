@@ -32,11 +32,7 @@ const Quiz = ({ quiz, handleQuestionsResult }) => {
                     }
                 </form>
                 <div className='correct_answer'>
-                    <h4>{answer}</h4>
-                    {/* <div>
-                        <button onClick={notify}>{correctAnswer}</button>
-                        <ToastContainer />
-                    </div> */}
+                    <h4>{answer}</h4>                    
                 </div>
             </div>
         </div>
